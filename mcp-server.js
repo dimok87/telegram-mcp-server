@@ -458,7 +458,7 @@ await initializeTelegram().catch((error) => {
 
 const server = http.createServer(async (req, res) => {
   try {
-    const url = new URL(req.url ?? "", `http://${req.headers.host ?? `${HOST}:${PORT}`}`);
+    const url = new URL(req.url, `http://${req.headers.host}`);
 
     if (req.method === "OPTIONS") {
       res.writeHead(204).end();
