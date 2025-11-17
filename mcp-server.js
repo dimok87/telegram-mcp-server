@@ -11,8 +11,8 @@ import MessageSyncService from "./message-sync-service.js";
 
 dotenv.config();
 
-const HOST = "0.0.0.0"; // process.env.MCP_HOST ?? process.env.FASTMCP_HOST ?? "127.0.0.1";
-const PORT = 80; // Number(process.env.MCP_PORT ?? process.env.FASTMCP_PORT ?? "8080");
+const HOST = "0.0.0.0";
+const PORT = process.env.PORT || 8080;
 
 const telegramClient = new TelegramClient(
   process.env.TELEGRAM_API_ID,
